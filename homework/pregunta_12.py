@@ -38,6 +38,3 @@ def pregunta_12():
     )
 
     return out
-
-
-print(pregunta_12())

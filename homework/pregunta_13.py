@@ -34,6 +34,3 @@ def pregunta_13():
     out = data.groupby("c1")["c5b"].sum()
 
     return out
-
-
-print(pregunta_13())
