@@ -5,6 +5,8 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 librerias de pandas para resolver las preguntas.
 """
 
+import pandas as pd
+
 
 def pregunta_05():
     """
@@ -20,3 +22,10 @@ def pregunta_05():
     E    9
     Name: c2, dtype: int64
     """
+    tabla_0 = "files/input/tbl0.tsv"
+    # tabla_1 = "files/input/tbl1.tsv"
+    # tabla_2 = "files/input/tbl2.tsv"
+
+    data = pd.read_csv(tabla_0, sep="\t")
+    promedio = data.groupby("c1")["c2"].max()
+    return promedio
